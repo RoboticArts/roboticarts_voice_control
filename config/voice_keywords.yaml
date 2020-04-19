@@ -1,0 +1,13 @@
+
+commands: ['forward',
+           'backward',
+           'turn left',
+           'turn right',
+           'stop',
+           'look left',
+           'look right',
+           'happy',
+           'angry',
+           'sad',
+           'neutral',
+           'confused']
