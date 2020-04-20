@@ -1,0 +1,13 @@
+
+commands: ['adelante',
+           'atras',
+           'gira izquierda',
+           'gira derecha',
+           'para',
+           'mira izquierda',
+           'mira derecha',
+           'feliz',
+           'enfadado',
+           'triste',
+           'neutral',
+           'confundido']
