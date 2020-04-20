@@ -3,22 +3,24 @@
 <launch>
 
     <!-- Useful parameters -->
-    <arg name = "alias"		 default = "robot" />
-	<arg name = "use_alias"	 default = "false" />
-    <arg name = "language"   default = "es-ES" />
-    <arg name = "engine"     default = "google" />
-
+    <arg name = "alias" default = "robot" />
+	<arg name = "use_alias" default = "false" />
+    <arg name = "alias_timeout" default = "10" />
+    <arg name = "language" default = "en-US" />
+    <arg name = "engine" default = "google" />
+    <arg name = "keyword_idiom" default = "english" />
 
     <node pkg="roboticarts_voice_control" type="voice_control.py" name="voice_control_node" output="screen">
 
-        <!-- Load keywords for speech recognition-->
-        <rosparam file="$(find roboticarts_voice_control)/config/voice_keywords.yaml"/>
-
+        <!-- Load keywords for speech recognition -->
+        <rosparam file="$(find roboticarts_voice_control)/config/$(arg keyword_idiom)/voice_keywords.yaml"/>
+        
         <!-- Configure the node -->
-        <param name="alias" value="$(arg alias)"/>
+        <param name="alias" value="$(arg alias)"/> 
 	    <param name = "use_alias" value="$(arg use_alias)"/>
-        <param name="language" value="$(arg language)"/>
-        <param name="engine" value="$(arg engine)"/>
+        <param name = "aliasTimeout" value="$(arg aliasTimeout)"/>
+        <param name= "language" value="$(arg language)"/>
+        <param name= "engine" value="$(arg engine)"/>
 
     </node>
 
