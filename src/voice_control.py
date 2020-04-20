@@ -1,5 +1,34 @@
 #!/usr/bin/env python3
 
+"""
+---------------------------------------------------------------------
+Robotic Arts Industries
+All Rights Reserved 2017-2020
+---------------------------------------------------------------------
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+---------------------------------------------------------------------
+Package: roboticarts_voice_control
+File: voice_control.py
+
+Description:
+
+    This file allows the recognition of voice commands to control robots. Commands
+    that want to be recognized must be defined in the voice_keywords.yaml file. When
+    a command is recognized, it is published in voice_recognition/command topic. On 
+    the other hand all recognized words are published in /voice_recognition/raw topic.
+    
+    Two speech recognition engines have been implemented:
+
+            -   Google Speech Recognition: online, works well, various languages
+            -   CMU Sphinx: offline, needs configuration to work well, only english
+
+----------------------------------------------------------------------
+		Version: 0.0.1						| Last Modification: 19/04/2020
+		Author:  Robert Vasquez Zavaleta
+		Contact: roboticarts1@gmail.com
+"""
+
 import speech_recognition as sr
 from  std_msgs.msg import String 
 import rospy
