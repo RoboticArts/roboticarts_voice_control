@@ -75,7 +75,7 @@ class RoboticartsVoiceControl:
                        self.node_name + "/engine": 'google',
                        self.node_name + "/alias": 'robot',
                        self.node_name + "/use_alias": False,
-                       self.node_name + "/aliasTimeout": 10,
+                       self.node_name + "/alias_timeout": 10,
                        self.node_name + "/language": 'en-US'
                       }
 
