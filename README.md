@@ -1,7 +1,16 @@
 # roboticarts_voice_control
-Package to teleop robots using voice recognition in ROS 
 
-Tested on Kinetic
+
+**Autor**: Robert Vasquez Zavaleta
+
+*Robotic Arts, All Rights Reserved 2017-2019*
+
+Software License Agreement (BSD License)
+
+**Description**: Package to teleop robots using voice recognition in ROS. Tested on Kinetic
+
+**Disclaimer**: This package uses the Google and Sphinix speech recognition engine, so the quality of the recognition will depend on its current development.
+
 
 ## 1. Requisites
 
@@ -66,7 +75,7 @@ $ rostopic echo /voice_recognition/raw
 Say something! ROS will publish your words. 
 
 ```
-data: "hello I am a speaking"
+data: "hello I am speaking"
 ---
 ```
 
@@ -155,11 +164,11 @@ If you are going to implement it in a launch file:
 ```
 <include file="$(find roboticarts_voice_control)/launch/voice_control.launch">
 
-    <arg name= "engine" value="google"/>
-    <arg name= "language" value="en-US"/>
+    <arg name = "engine" value="google"/>
+    <arg name = "language" value="en-US"/>
     <arg name = "use_alias" value="robot"/>
-    <arg name= "keyword_idiom" value="english"/> 
-    <arg name= "alias" value="robot"/> 
+    <arg name = "keyword_idiom" value="english"/> 
+    <arg name = "alias" value="robot"/> 
     <arg name = "alias_timeout" value="10"/>
    
 </include>
@@ -185,8 +194,8 @@ $ alias_tiemout = 10
 ### 5. Troubleshooting
 
 PyAudio works with ALSA driver. The first device used by this driver is the
-default driver. If you get a message like this when you launch the node and the
-node does not detect you microphone, you have to change the default device by your
+default driver. If you get a message like this when you launch the node and **the
+node does not detect you microphone**, you have to change the default device by your
 microphone.
 
 ```
